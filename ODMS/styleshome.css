@@ -1,0 +1,150 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+  font-family: MontHeavy;
+  src: url(Mont-HeavyDEMO.otf);
+}
+@font-face {
+  font-family: MontLight;
+  src: url(Mont-ExtraLightDEMO.otf);
+}
+body {
+	text-align: center;
+}
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+header {
+	height: 100px;
+	background: #fff40c;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+}
+.logo {
+    margin-top: 10;
+	width: 300px;
+    cursor: pointer;
+	float: left;
+}
+li{
+    display: inline-block;
+}
+li a{
+    margin-top: 35px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-family: MontHeavy;
+    font-size: 20px;
+    padding: 0 20px;
+}
+.bhover::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+.bhover:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+.secbanner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+.secbanner .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.secbanner .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
+    background-position: center;
+}
+.secbanner .imgBx img.active{
+    opacity: 1;
+}
+.controls .nextc{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 80px;
+}
+.controls .prevc{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 80px;
+}
+.controls li{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    background: rgba(0,0,0,0.2);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.controls li:hover{
+    background: #fff40c;
+}
+.controls li:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #111;
+    border-bottom: 3px solid #111;
+    transform: rotate(45deg);
+}
+.controls .prevc li:before{
+    transform: rotate(225deg);
+}
+.contentBx{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.contentBx div{
+    display: none;
+}
+.contentBx div.active{
+    display: block;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+}
+.contentBx h2{
+    font-size: 100px;
+    margin-top: 5px;
+    font-family: MontHeavy;
+}
+.contentBx p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: MontLight;
+}

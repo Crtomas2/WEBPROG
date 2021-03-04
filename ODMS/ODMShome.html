@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ODMS Enterprise</title>
+	<link rel="stylesheet" href="styleshome.css">
+    <link rel="icon" href="logo2.png">
+</head>
+<body>
+        <div class="box-area">
+		<header>
+			<div class="wrapper">
+					<img src="logo.png" class="logo">
+				<div class="navcontainer">
+					<li><a href=ODMShome.html class="bhover">HOME</a></li>
+                    <li><a href=ODMSabout.html class="bhover">ABOUT</a></li>
+                    <li><a href="#" class="bhover">PRODUCTS</a></li>
+                    <li><a href=ODMSservices.html class="bhover">SERVICES</a></li>
+                    <li><a href="#" class="bhover">CONTACT</a></li>
+                </div>
+			</div>
+        </header>
+        <section class="secbanner">
+            <div class="imgBx">
+                <img src="backgroundODMS.jpg" class="active">
+                <img src="img1.jpg">
+                <img src="img2.jpg">
+            </div>
+            <div class="contentBx">
+                <div class="active">
+                    <h2>ODMS Enterprise</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit saepe sint! <br> Assumenda consectetur fugit sit tempore.</p>
+                </div>
+                <div>
+                    <h2>ODMS Enterprise Mission</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit saepe sint!</p>
+                </div>
+                <div>
+                    <h2>ODMS Enterprise Vision</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit saepe sint! <br> Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto perspiciatis suscipit voluptatibus!</p>
+                </div>
+            </div>
+            <ul class="controls">
+                <div class="nextc"><li onclick="prevSlide();nextSlideText();"></li></div>
+                <div class="prevc"><li onclick="nextSlide();nextSlideText();"></li></div>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            const imgBx = document.querySelector('.imgBx');
+            const slides = imgBx.getElementsByTagName('img');
+            var i = 0;
+            
+            function nextSlide(){
+                slides[i].classList.remove('active');
+                i = (i + 1) % slides.length;
+                slides[i].classList.add('active');
+            }
+            function prevSlide(){
+                slides[i].classList.remove('active');
+                i = (i - 1 + slides.length) % slides.length;
+                slides[i].classList.add('active');
+            }
+            const contentBx = document.querySelector('.contentBx');
+            const slidesText = contentBx.getElementsByTagName('div');
+            var j = 0;
+            
+            function nextSlideText(){
+                slidesText[j].classList.remove('active');
+                j = (j + 1) % slidesText.length;
+                slidesText[j].classList.add('active');
+            }
+            function prevSlideText(){
+                slidesText[j].classList.remove('active');
+                j = (j - 1 + slidesText.length) % slidesText.length;
+                slidesText[j].classList.add('active');
+            }
+            </script>
+        </div>
+</body>
+</html>
